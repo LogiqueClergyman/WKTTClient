@@ -7,7 +7,7 @@ function ConnectWallet() {
   const { connect, connectors, error, isPending } = useConnect();
 
   return (
-    <div className="flex flex-col items-center gap-4 p-4">
+    <div className="flex flex-col items-center gap-4">
       {connectors.map((connector) => (
         <button
           key={connector.id}
@@ -41,10 +41,10 @@ function Wallet() {
   const { address, isConnected } = useAccount();
 
   return (
-    <div className="max-w-sm mx-auto mt-8 p-6 bg-white rounded-xl shadow-lg">
+    <div className=" bg-white rounded-xl shadow-lg">
       {isConnected ? (
-        <div className="flex flex-col items-center gap-4">
-          <div className="text-gray-700 font-medium">
+        <div className="flex items-center gap-4">
+          <div className="text-gray-700 font-medium px-1">
             Connected as:{" "}
             <span className="text-sm text-gray-500 break-all">{address}</span>
           </div>
